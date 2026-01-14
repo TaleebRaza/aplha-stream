@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   Activity,
   Cpu,
@@ -545,7 +545,7 @@ export default function AlphaStream() {
               >
                 {ganttHistory
                   .filter((b) => b.clientId === client)
-                  .map((block, idx) => (
+                  .map((block) => (
                     <div
                       key={block.id}
                       className={`absolute h-3/4 rounded-sm shadow-lg ${THEME_SOLID[client]} bg-opacity-80 border border-white/20 flex items-center justify-center`}
@@ -1002,7 +1002,7 @@ export default function AlphaStream() {
                   No cycles executed.
                 </div>
               )}
-              {logs.map((log, i) => (
+              {logs.map((log) => (
                 <div
                   key={log.id}
                   className="flex items-center space-x-2 text-slate-400 p-1.5 hover:bg-slate-900 rounded border-b border-slate-800/50"
